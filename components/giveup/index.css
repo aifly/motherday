@@ -1,0 +1,65 @@
+.lt-full {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0; }
+
+.zmiti-text-overflow {
+  overflow: hidden;
+  white-space: nowrap;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  -webkit-text-overflow: ellipsis; }
+
+.zmiti-play {
+  width: .8rem;
+  height: .8rem;
+  border-radius: 50%;
+  position: fixed;
+  z-index: 1000;
+  right: .5rem;
+  top: .5rem; }
+  .zmiti-play.rotate {
+    -webkit-animation: rotate 5s linear infinite;
+    animation: rotate 5s linear infinite; }
+
+@-webkit-keyframes rotate {
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+.zmiti-give-main-ui {
+  background: #fff;
+  z-index: -1;
+  opacity: 0; }
+  .zmiti-give-main-ui.show {
+    opacity: 1;
+    z-index: 10; }
+  .zmiti-give-main-ui .zmiti-give-bg {
+    -webkit-transition: 1s;
+    transition: 1s; }
+  .zmiti-give-main-ui .zmiti-concat {
+    position: absolute;
+    bottom: 15vh;
+    left: 50%;
+    -webkit-transform: translate3d(-50%, 0, 0);
+    transform: translate3d(-50%, 0, 0); }
+  .zmiti-give-main-ui .zmiti-logo {
+    position: absolute;
+    z-index: 10;
+    left: 70px;
+    top: 70px; }
+  .zmiti-give-main-ui .zmiti-text {
+    font-size: 40px;
+    position: absolute;
+    top: 56%;
+    text-align: center;
+    width: 100%; }
+    .zmiti-give-main-ui .zmiti-text > div {
+      color: #792a2c;
+      line-height: 70px; }
+      .zmiti-give-main-ui .zmiti-text > div:nth-of-type(2) {
+        -webkit-transition: 1s;
+        transition: 1s; }
+
+/*# sourceMappingURL=index.css.map */

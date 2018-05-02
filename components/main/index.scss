@@ -1,0 +1,78 @@
+﻿@import "../css/base.scss";
+$baseColor: #fcffb4;
+$viewW: 750px;
+$bgColor: #fff;
+
+.zmiti-main-main-ui{
+	background: $bgColor;
+	//
+	&.show{
+		opacity: 1;
+		z-index: 12;
+	}
+
+	opacity: 0;
+	z-index: -1;
+
+	.zmiti-logo{
+		margin: 50px;
+		img{
+			width: 200px;
+		}
+	}
+
+	.zmiti-dis{
+		text-align: center;
+		margin: 20px;
+		font-size: 36px;
+		span{
+			color:#982f13;
+			font-size: 70px;
+			font-family: Georgia;
+		}
+	}
+
+	.zmiti-text{
+		width: 40%;
+		margin: 50px auto;
+	}
+
+	.zmiti-concat{
+		margin: 40px auto;
+		text-align: center;
+		img{
+			width: 350px;
+		}
+	}
+	.zmiti-info{
+		color:#c2b2a8;
+		@include pos(a);
+		right: 10px;
+		bottom: 20px;
+	}
+	
+	.zmiti-video{
+		background: #000;
+		width: $viewW;
+		text-align: center;
+
+		video{
+			height: 100%;
+		}
+
+		&.video-enter-active, &.video-leave-active {
+			@include transition(1s .5s);
+		}
+
+		&.video-enter, &.video-leave-to {
+			opacity: 0;
+		}
+	}
+	
+	
+}
+
+
+
+
+ 

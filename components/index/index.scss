@@ -1,0 +1,162 @@
+﻿@import "../css/base.scss";
+$baseColor: #fcffb4;
+$viewW: 750px;
+$bgColor: #fff;
+
+.zmiti-index-main-ui {
+	overflow: hidden;
+	width: 10rem;
+	left: 50% !important;
+	margin-left: -$viewW/2;
+	background: $bgColor;
+
+	overflow: hidden;
+
+	opacity:0;
+	z-index: -1;
+	
+	.zmiti-index-wrap{
+		.zmiti-top{
+			@include pos(a);
+			left: 0;
+			height: 70px;
+			top: -70px;
+			width: 100%;
+			text-align: center;
+			color:#999;	
+		}
+		.zmiti-bottom{
+			@include pos(a);
+			left: 0;
+			height: 70px;
+			bottom: -70px;
+			width: 100%;
+			text-align: center;
+			color:#999;		
+		}
+	}
+	&:before{
+		display: none;
+		content:'别扯了，没有啦^_^';
+		@include pos(a);
+		left: 0;
+		top: 1vh;
+		width: 100%;
+		text-align: center;
+		color:#999;
+	}
+
+	&:after{
+		display: none;
+		color:#999;
+		content:'我是有底线的好吗~~';
+		@include pos(a);
+		bottom: 1vh;
+		width: 100%;
+		text-align: center;
+		z-index: -1;
+	}
+
+
+	.zmiti-btns{
+		@include displayBox(horizontal);
+		padding: 20px 0 80px;
+		&>div{
+			margin: 0 10px;
+		}
+	}
+	.zmiti-copyright{
+		width: 100%;
+		text-align: center;
+		color:#a63000;
+		padding-bottom: 40px;
+	}
+	&.show{
+		opacity: 1;
+		z-index: 10;
+	}
+
+	.zmiti-title{
+
+	}
+	.zmiti-index{
+		margin-top: 5vh;
+	}
+
+	.zmiti-canvas{
+		box-sizing:border-box;
+		//border:1px solid red;
+		@include pos(a);
+		top: 10vh;
+		left: 0;
+	}
+	
+	
+
+
+}
+
+@-webkit-keyframes rotate1{
+	to{
+		@include transform(rotate(360deg) scale(2));
+		opacity:0
+	}
+}
+
+.zmiti-loading {
+	z-index: 1000;
+
+	.zmiti-loading-ui {
+		width: 6rem;
+		left: 2rem;
+		@include pos(a);
+		top: 6rem;
+
+		.zmiti-loading-bar {
+			width: 2rem;
+			@include br(10px);
+
+			&:before {
+				content: '';
+				@include br(10px);
+				@include pos(a);
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				box-shadow: 0 0 3px rgba(255, 255, 255, .5);
+			}
+
+			//height: 1rem;
+			@include pos(r);
+			margin: 0 auto;
+
+			.zmiti-target {
+				$size: .4rem;
+				width: $size;
+				height: $size;
+				@include br();
+				background: #fff;
+				left: 50%;
+				top: .4rem;
+				@include pos(a);
+				margin-left: -$size/2;
+				@include animation(scale linear 2s  infinite alternate);
+			}
+
+		}
+
+		.zmiti-progress {
+			margin-top: .5rem;
+			text-align: center;
+			color: #fff;
+			font-family: Georgia;
+			font-size: .7rem;
+		}
+
+	}
+
+}
+
+.zmiti-play {
+}

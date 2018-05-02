@@ -1,0 +1,45 @@
+﻿@import "../css/base.scss";
+$baseColor: #fcffb4;
+$viewW: 750px;
+$bgColor: #fff;
+
+.zmiti-give-main-ui {
+	
+	background: $bgColor;
+	z-index: -1;
+	opacity: 0;
+	&.show{
+		opacity: 1;
+		z-index: 10;
+	}
+	.zmiti-give-bg{
+		@include transition(1s);
+	}
+	.zmiti-concat{
+		@include pos(a);
+		bottom: 15vh;
+		left: 50%;
+		@include transform(translate3d(-50%,0,0));
+	}
+	.zmiti-logo{
+		@include pos(a);
+		z-index: 10;
+		left: 70px;
+		top: 70px;
+	}
+	.zmiti-text{
+		font-size: 40px;
+		@include pos(a);
+		top: 56%;
+		text-align: center;
+		width: 100%;
+
+		&>div{
+			color:#792a2c;
+			line-height: 70px;
+			&:nth-of-type(2){
+				@include transition(1s);
+			}
+		}
+	}
+}

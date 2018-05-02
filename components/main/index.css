@@ -1,0 +1,75 @@
+.lt-full {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0; }
+
+.zmiti-text-overflow {
+  overflow: hidden;
+  white-space: nowrap;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  -webkit-text-overflow: ellipsis; }
+
+.zmiti-play {
+  width: .8rem;
+  height: .8rem;
+  border-radius: 50%;
+  position: fixed;
+  z-index: 1000;
+  right: .5rem;
+  top: .5rem; }
+  .zmiti-play.rotate {
+    -webkit-animation: rotate 5s linear infinite;
+    animation: rotate 5s linear infinite; }
+
+@-webkit-keyframes rotate {
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+.zmiti-main-main-ui {
+  background: #fff;
+  opacity: 0;
+  z-index: -1; }
+  .zmiti-main-main-ui.show {
+    opacity: 1;
+    z-index: 12; }
+  .zmiti-main-main-ui .zmiti-logo {
+    margin: 50px; }
+    .zmiti-main-main-ui .zmiti-logo img {
+      width: 200px; }
+  .zmiti-main-main-ui .zmiti-dis {
+    text-align: center;
+    margin: 20px;
+    font-size: 36px; }
+    .zmiti-main-main-ui .zmiti-dis span {
+      color: #982f13;
+      font-size: 70px;
+      font-family: Georgia; }
+  .zmiti-main-main-ui .zmiti-text {
+    width: 40%;
+    margin: 50px auto; }
+  .zmiti-main-main-ui .zmiti-concat {
+    margin: 40px auto;
+    text-align: center; }
+    .zmiti-main-main-ui .zmiti-concat img {
+      width: 350px; }
+  .zmiti-main-main-ui .zmiti-info {
+    color: #c2b2a8;
+    position: absolute;
+    right: 10px;
+    bottom: 20px; }
+  .zmiti-main-main-ui .zmiti-video {
+    background: #000;
+    width: 750px;
+    text-align: center; }
+    .zmiti-main-main-ui .zmiti-video video {
+      height: 100%; }
+    .zmiti-main-main-ui .zmiti-video.video-enter-active, .zmiti-main-main-ui .zmiti-video.video-leave-active {
+      -webkit-transition: 1s 0.5s;
+      transition: 1s 0.5s; }
+    .zmiti-main-main-ui .zmiti-video.video-enter, .zmiti-main-main-ui .zmiti-video.video-leave-to {
+      opacity: 0; }
+
+/*# sourceMappingURL=index.css.map */
